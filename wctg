@@ -1,0 +1,53 @@
+echo 'WCET_Generater_V2.3'
+
+#check dependencies
+command -v python3 >/dev/null 2>&1 || { echo -e >&2 "I require python3 but it's can't be found. \nTry source /etc/profile or .bash_profile?\nAborted."; exit 1; }
+command -v sweet >/dev/null 2>&1 || { echo -e >&2 "I require SWEET but it's can't be found. \nTry source /etc/profile or .bash_profile?\nAborted."; exit 1; }
+
+
+
+args=""
+
+while getopts "i:w:s:t:h" opt;
+do
+    case $opt in
+        i)	#Input Files.
+			if [ ! -f $OPTARG ]; then
+				echo "-i Input Invalid."
+				echo "Aborted."
+				exit 0
+			else
+				file=`basename $OPTARG`
+            	args="$args -i $(cd `dirname $OPTARG`; pwd)/$file"
+			fi
+			;;
+        w)  #Generate WCET for the file imported.
+			if [ -f $OPTARG ]; then
+				echo "-w Input Invalid."
+				echo "Aborted."
+				exit 0
+			fi
+            file=`basename $OPTARG`
+            args="$args -w $(cd `dirname $OPTARG`; pwd)/$file"
+            ;;
+        t)  #Generate ALF for every OpenMP task.
+			args="$args -t $OPTARG"
+            ;;
+        h)  #help
+            args="-h"
+            break
+            ;;
+        \?)
+            echo "Invalid Operator."
+            echo "Aborted."
+            exit 0
+            ;;
+    esac
+done
+
+if [ -n "$args" ]; then
+	echo "Executing:/usr/bin/python3 $(cd `dirname $0`; pwd)/src/main.py "$args
+	/usr/bin/python3 $(cd `dirname $0`; pwd)/src/main.py $args
+else
+	echo "Please Import the file u'd like to analyze."
+fi

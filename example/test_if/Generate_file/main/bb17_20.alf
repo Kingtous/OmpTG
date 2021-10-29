@@ -1,0 +1,44 @@
+{ alf
+ { macro_defs }
+ { least_addr_unit 8 }
+ little_endian
+ { exports
+  { frefs
+   { fref 64 "a" }
+  }
+  { lrefs 
+ { lref 64 "main" } }
+ }
+ { imports
+  { frefs
+   { fref 64 "$null" }
+   { fref 64 "$mem" }
+  }
+  { lrefs }
+ }
+ { decls
+  { alloc 64 "a" 352 }
+ }
+ { inits
+  { init { ref "a" { dec_unsigned 64 0 } } { dec_unsigned 32 0 } }
+  { init { ref "a" { dec_unsigned 64 4 } } { dec_unsigned 32 0 } }
+  { init { ref "a" { dec_unsigned 64 8 } } { dec_unsigned 32 0 } }
+  { init { ref "a" { dec_unsigned 64 12 } } { dec_unsigned 32 0 } }
+  { init { ref "a" { dec_unsigned 64 16 } } { dec_unsigned 32 0 } }
+  { init { ref "a" { dec_unsigned 64 20 } } { dec_unsigned 32 0 } }
+  { init { ref "a" { dec_unsigned 64 24 } } { dec_unsigned 32 0 } }
+  { init { ref "a" { dec_unsigned 64 28 } } { dec_unsigned 32 0 } }
+  { init { ref "a" { dec_unsigned 64 32 } } { dec_unsigned 32 0 } }
+  { init { ref "a" { dec_unsigned 64 36 } } { dec_unsigned 32 0 } }
+  { init { ref "a" { dec_unsigned 64 40 } } { dec_unsigned 32 0 } }
+ }
+ { funcs
+
+{ func   { label 64 { lref 64 "main" } { dec_unsigned 64 0 } }   { arg_decls }   { scope    { decls     { alloc 64 "%tmp" 32 }       { alloc 64 "%i" 32 }       { alloc 64 "%j" 32 }       { alloc 64 "%temp" 32 }       { alloc 64 "%tmp2" 32 }       { alloc 64 "%tmp5" 32 }       { alloc 64 "%tmp7" 32 }       { alloc 64 "%tmp10" 32 }       { alloc 64 "%tmp11" 32 }       { alloc 64 "%tmp15" 32 }       { alloc 64 "%tmp18" 32 }       { alloc 64 "%tmp21" 32 }       { alloc 64 "%tmp22" 32 }       { alloc 64 "%tmp26" 32 }       { alloc 64 "%tmp27" 32 }       { alloc 64 "%tmp30" 32 }       { alloc 64 "%tmp31" 32 }       { alloc 64 "%tmp35" 32 }       { alloc 64 "%tmp38" 32 }      }    { inits }    { stmts          
+{ label 64 { lref 64 "main::bb17::20" } { dec_unsigned 64 0 } }     { store { addr 64 { fref 64 "%tmp35" } { dec_unsigned 64 0 } } with { load 32 { addr 64 { fref 64 "%j" } { dec_unsigned 64 0 } } } }         
+{ label 64 { lref 64 "main::bb40" } { dec_unsigned 64 0 } }          { return { dec_unsigned 32 1 } }    
+     }
+    }
+   }
+  }
+ }

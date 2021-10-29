@@ -1,0 +1,120 @@
+{ alf
+ { macro_defs }
+ { least_addr_unit 8 }
+ little_endian
+ { exports
+  { frefs
+   { fref 64 "_ompi_crity" }
+  }
+  { lrefs 
+ { lref 64 "fft_twiddle_8" } }
+ }
+ { imports
+  { frefs
+   { fref 64 "bots_verbose_mode" }
+   { fref 64 "stdout" }
+   { fref 64 "$null" }
+   { fref 64 "$mem" }
+  }
+  { lrefs
+   { lref 64 "cos" }
+   { lref 64 "sin" }
+   { lref 64 "fprintf" }
+   { lref 64 "malloc" }
+   { lref 64 "ort_execute_parallel" }
+   { lref 64 "free" }
+   { lref 64 "sqrt" }
+   { lref 64 "ort_mysingle" }
+  }
+ }
+ { decls
+  { alloc 64 ".str" 192 }
+  { alloc 64 ".str1" 104 }
+  { alloc 64 ".str2" 120 }
+  { alloc 64 ".str3" 152 }
+  { alloc 64 "_ompi_crity" 64 }
+ }
+ { inits
+  { init { ref ".str" { dec_unsigned 64 0 } } { dec_unsigned 8 67 } read_only }
+  { init { ref ".str" { dec_unsigned 64 1 } } { dec_unsigned 8 111 } read_only }
+  { init { ref ".str" { dec_unsigned 64 2 } } { dec_unsigned 8 109 } read_only }
+  { init { ref ".str" { dec_unsigned 64 3 } } { dec_unsigned 8 112 } read_only }
+  { init { ref ".str" { dec_unsigned 64 4 } } { dec_unsigned 8 117 } read_only }
+  { init { ref ".str" { dec_unsigned 64 5 } } { dec_unsigned 8 116 } read_only }
+  { init { ref ".str" { dec_unsigned 64 6 } } { dec_unsigned 8 105 } read_only }
+  { init { ref ".str" { dec_unsigned 64 7 } } { dec_unsigned 8 110 } read_only }
+  { init { ref ".str" { dec_unsigned 64 8 } } { dec_unsigned 8 103 } read_only }
+  { init { ref ".str" { dec_unsigned 64 9 } } { dec_unsigned 8 32 } read_only }
+  { init { ref ".str" { dec_unsigned 64 10 } } { dec_unsigned 8 99 } read_only }
+  { init { ref ".str" { dec_unsigned 64 11 } } { dec_unsigned 8 111 } read_only }
+  { init { ref ".str" { dec_unsigned 64 12 } } { dec_unsigned 8 101 } read_only }
+  { init { ref ".str" { dec_unsigned 64 13 } } { dec_unsigned 8 102 } read_only }
+  { init { ref ".str" { dec_unsigned 64 14 } } { dec_unsigned 8 102 } read_only }
+  { init { ref ".str" { dec_unsigned 64 15 } } { dec_unsigned 8 105 } read_only }
+  { init { ref ".str" { dec_unsigned 64 16 } } { dec_unsigned 8 99 } read_only }
+  { init { ref ".str" { dec_unsigned 64 17 } } { dec_unsigned 8 105 } read_only }
+  { init { ref ".str" { dec_unsigned 64 18 } } { dec_unsigned 8 101 } read_only }
+  { init { ref ".str" { dec_unsigned 64 19 } } { dec_unsigned 8 110 } read_only }
+  { init { ref ".str" { dec_unsigned 64 20 } } { dec_unsigned 8 116 } read_only }
+  { init { ref ".str" { dec_unsigned 64 21 } } { dec_unsigned 8 115 } read_only }
+  { init { ref ".str" { dec_unsigned 64 22 } } { dec_unsigned 8 32 } read_only }
+  { init { ref ".str" { dec_unsigned 64 23 } } { dec_unsigned 8 0 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 0 } } { dec_unsigned 8 32 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 1 } } { dec_unsigned 8 99 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 2 } } { dec_unsigned 8 111 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 3 } } { dec_unsigned 8 109 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 4 } } { dec_unsigned 8 112 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 5 } } { dec_unsigned 8 108 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 6 } } { dec_unsigned 8 101 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 7 } } { dec_unsigned 8 116 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 8 } } { dec_unsigned 8 101 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 9 } } { dec_unsigned 8 100 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 10 } } { dec_unsigned 8 33 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 11 } } { dec_unsigned 8 10 } read_only }
+  { init { ref ".str1" { dec_unsigned 64 12 } } { dec_unsigned 8 0 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 0 } } { dec_unsigned 8 67 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 1 } } { dec_unsigned 8 111 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 2 } } { dec_unsigned 8 109 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 3 } } { dec_unsigned 8 112 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 4 } } { dec_unsigned 8 117 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 5 } } { dec_unsigned 8 116 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 6 } } { dec_unsigned 8 105 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 7 } } { dec_unsigned 8 110 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 8 } } { dec_unsigned 8 103 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 9 } } { dec_unsigned 8 32 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 10 } } { dec_unsigned 8 70 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 11 } } { dec_unsigned 8 70 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 12 } } { dec_unsigned 8 84 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 13 } } { dec_unsigned 8 32 } read_only }
+  { init { ref ".str2" { dec_unsigned 64 14 } } { dec_unsigned 8 0 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 0 } } { dec_unsigned 8 114 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 1 } } { dec_unsigned 8 101 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 2 } } { dec_unsigned 8 108 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 3 } } { dec_unsigned 8 97 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 4 } } { dec_unsigned 8 116 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 5 } } { dec_unsigned 8 105 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 6 } } { dec_unsigned 8 118 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 7 } } { dec_unsigned 8 101 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 8 } } { dec_unsigned 8 32 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 9 } } { dec_unsigned 8 101 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 10 } } { dec_unsigned 8 114 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 11 } } { dec_unsigned 8 114 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 12 } } { dec_unsigned 8 111 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 13 } } { dec_unsigned 8 114 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 14 } } { dec_unsigned 8 61 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 15 } } { dec_unsigned 8 37 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 16 } } { dec_unsigned 8 101 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 17 } } { dec_unsigned 8 10 } read_only }
+  { init { ref ".str3" { dec_unsigned 64 18 } } { dec_unsigned 8 0 } read_only }
+  { init { ref "_ompi_crity" { dec_unsigned 64 0 } } { addr 64 { fref 64 "$null" } { dec_unsigned 64 0 } } }
+ }
+ { funcs
+
+{ func   { label 64 { lref 64 "fft_twiddle_8" } { dec_unsigned 64 0 } }   { arg_decls    { alloc 64 "%a" 32 }    { alloc 64 "%b" 32 }    { alloc 64 "%in" 64 }    { alloc 64 "%out" 64 }    { alloc 64 "%W" 64 }    { alloc 64 "%nW" 32 }    { alloc 64 "%nWdn" 32 }    { alloc 64 "%m" 32 }   }   { scope    { decls     { alloc 64 "%tmp" 32 }       { alloc 64 "%tmp1" 32 }       { alloc 64 "%tmp2" 64 }       { alloc 64 "%tmp3" 64 }       { alloc 64 "%tmp4" 64 }       { alloc 64 "%tmp5" 32 }       { alloc 64 "%tmp6" 32 }       { alloc 64 "%tmp7" 32 }       { alloc 64 "%l1" 32 }       { alloc 64 "%i" 32 }       { alloc 64 "%jp" 64 }       { alloc 64 "%kp" 64 }       { alloc 64 "%tmpr" 64 }       { alloc 64 "%tmpi" 64 }       { alloc 64 "%wr" 64 }       { alloc 64 "%wi" 64 }       { alloc 64 "%r1_0" 64 }       { alloc 64 "%i1_0" 64 }       { alloc 64 "%r1_1" 64 }       { alloc 64 "%i1_1" 64 }       { alloc 64 "%r1_2" 64 }       { alloc 64 "%i1_2" 64 }       { alloc 64 "%r1_3" 64 }       { alloc 64 "%i1_3" 64 }       { alloc 64 "%r1_4" 64 }       { alloc 64 "%i1_4" 64 }       { alloc 64 "%r1_5" 64 }       { alloc 64 "%i1_5" 64 }       { alloc 64 "%r1_6" 64 }       { alloc 64 "%i1_6" 64 }       { alloc 64 "%r1_7" 64 }       { alloc 64 "%i1_7" 64 }       { alloc 64 "%r2_0" 64 }       { alloc 64 "%i2_0" 64 }       { alloc 64 "%r2_2" 64 }       { alloc 64 "%i2_2" 64 }       { alloc 64 "%r2_4" 64 }       { alloc 64 "%i2_4" 64 }       { alloc 64 "%r2_6" 64 }       { alloc 64 "%i2_6" 64 }       { alloc 64 "%r3_0" 64 }       { alloc 64 "%i3_0" 64 }       { alloc 64 "%r3_4" 64 }       { alloc 64 "%i3_4" 64 }       { alloc 64 "%r3_2" 64 }       { alloc 64 "%i3_2" 64 }       { alloc 64 "%r3_6" 64 }       { alloc 64 "%i3_6" 64 }       { alloc 64 "%r2_1" 64 }       { alloc 64 "%i2_1" 64 }       { alloc 64 "%r2_3" 64 }       { alloc 64 "%i2_3" 64 }       { alloc 64 "%r2_5" 64 }       { alloc 64 "%i2_5" 64 }       { alloc 64 "%r2_7" 64 }       { alloc 64 "%i2_7" 64 }       { alloc 64 "%r3_1" 64 }       { alloc 64 "%i3_1" 64 }       { alloc 64 "%r3_5" 64 }       { alloc 64 "%i3_5" 64 }       { alloc 64 "%r3_3" 64 }       { alloc 64 "%i3_3" 64 }       { alloc 64 "%r3_7" 64 }       { alloc 64 "%i3_7" 64 }       { alloc 64 "%ab" 32 }       { alloc 64 "%tmp8" 32 }       { alloc 64 "%tmp9" 32 }       { alloc 64 "%tmp13" 32 }       { alloc 64 "%tmp14" 32 }       { alloc 64 "%tmp15" 32 }       { alloc 64 "%tmp17" 64 }       { alloc 64 "%tmp18" 32 }       { alloc 64 "%tmp22" 32 }       { alloc 64 "%tmp23" 32 }       { alloc 64 "%tmp26" 64 }       { alloc 64 "%tmp27" 32 }       { alloc 64 "%tmp30" 32 }       { alloc 64 "%tmp33" 64 }       { alloc 64 "%tmp36" 64 }       { alloc 64 "%tmp37" 32 }       { alloc 64 "%tmp40" 64 }       { alloc 64 "%tmp43" 64 }       { alloc 64 "%tmp44" 32 }       { alloc 64 "%tmp47" 64 }       { alloc 64 "%tmp50" 64 }       { alloc 64 "%tmp51" 32 }       { alloc 64 "%tmp54" 64 }       { alloc 64 "%tmp57" 64 }       { alloc 64 "%tmp58" 32 }       { alloc 64 "%tmp61" 64 }       { alloc 64 "%tmp64" 64 }       { alloc 64 "%tmp65" 32 }       { alloc 64 "%tmp68" 64 }       { alloc 64 "%tmp71" 64 }       { alloc 64 "%tmp72" 64 }       { alloc 64 "%tmp73" 64 }       { alloc 64 "%tmp75" 64 }       { alloc 64 "%tmp76" 64 }       { alloc 64 "%tmp79" 64 }       { alloc 64 "%tmp80" 64 }       { alloc 64 "%tmp82" 64 }       { alloc 64 "%tmp83" 64 }       { alloc 64 "%tmp86" 64 }       { alloc 64 "%tmp87" 64 }       { alloc 64 "%tmp89" 64 }       { alloc 64 "%tmp90" 64 }       { alloc 64 "%tmp92" 64 }       { alloc 64 "%tmp93" 64 }       { alloc 64 "%tmp95" 64 }       { alloc 64 "%tmp96" 64 }       { alloc 64 "%tmp98" 32 }       { alloc 64 "%tmp101" 64 }       { alloc 64 "%tmp104" 64 }       { alloc 64 "%tmp105" 32 }       { alloc 64 "%tmp108" 64 }       { alloc 64 "%tmp111" 64 }       { alloc 64 "%tmp112" 32 }       { alloc 64 "%tmp115" 64 }       { alloc 64 "%tmp118" 64 }       { alloc 64 "%tmp119" 32 }       { alloc 64 "%tmp122" 64 }       { alloc 64 "%tmp125" 64 }       { alloc 64 "%tmp126" 64 }       { alloc 64 "%tmp127" 64 }       { alloc 64 "%tmp129" 64 }       { alloc 64 "%tmp130" 64 }       { alloc 64 "%tmp133" 64 }       { alloc 64 "%tmp134" 64 }       { alloc 64 "%tmp136" 64 }       { alloc 64 "%tmp137" 64 }       { alloc 64 "%tmp140" 32 }       { alloc 64 "%tmp143" 64 }       { alloc 64 "%tmp146" 64 }       { alloc 64 "%tmp147" 32 }       { alloc 64 "%tmp150" 64 }       { alloc 64 "%tmp153" 64 }       { alloc 64 "%tmp154" 32 }       { alloc 64 "%tmp157" 64 }       { alloc 64 "%tmp160" 64 }       { alloc 64 "%tmp161" 32 }       { alloc 64 "%tmp164" 64 }       { alloc 64 "%tmp167" 64 }       { alloc 64 "%tmp168" 64 }       { alloc 64 "%tmp169" 64 }       { alloc 64 "%tmp171" 64 }       { alloc 64 "%tmp172" 64 }       { alloc 64 "%tmp175" 64 }       { alloc 64 "%tmp176" 64 }       { alloc 64 "%tmp178" 64 }       { alloc 64 "%tmp179" 64 }       { alloc 64 "%tmp182" 64 }       { alloc 64 "%tmp183" 64 }       { alloc 64 "%tmp185" 64 }       { alloc 64 "%tmp186" 64 }       { alloc 64 "%tmp188" 64 }       { alloc 64 "%tmp189" 64 }       { alloc 64 "%tmp191" 64 }       { alloc 64 "%tmp192" 64 }       { alloc 64 "%tmp194" 64 }       { alloc 64 "%tmp195" 64 }       { alloc 64 "%tmp197" 64 }       { alloc 64 "%tmp198" 64 }       { alloc 64 "%tmp200" 64 }       { alloc 64 "%tmp201" 64 }       { alloc 64 "%tmp203" 64 }       { alloc 64 "%tmp204" 64 }       { alloc 64 "%tmp206" 64 }       { alloc 64 "%tmp207" 64 }       { alloc 64 "%tmp209" 64 }       { alloc 64 "%tmp210" 64 }       { alloc 64 "%tmp212" 64 }       { alloc 64 "%tmp213" 64 }       { alloc 64 "%tmp215" 64 }       { alloc 64 "%tmp216" 64 }       { alloc 64 "%tmp218" 32 }       { alloc 64 "%tmp221" 64 }       { alloc 64 "%tmp224" 64 }       { alloc 64 "%tmp225" 32 }       { alloc 64 "%tmp228" 64 }       { alloc 64 "%tmp231" 64 }       { alloc 64 "%tmp232" 32 }       { alloc 64 "%tmp235" 64 }       { alloc 64 "%tmp238" 64 }       { alloc 64 "%tmp239" 32 }       { alloc 64 "%tmp242" 64 }       { alloc 64 "%tmp245" 64 }       { alloc 64 "%tmp246" 64 }       { alloc 64 "%tmp247" 64 }       { alloc 64 "%tmp249" 64 }       { alloc 64 "%tmp250" 64 }       { alloc 64 "%tmp253" 64 }       { alloc 64 "%tmp254" 64 }       { alloc 64 "%tmp256" 64 }       { alloc 64 "%tmp257" 64 }       { alloc 64 "%tmp260" 32 }       { alloc 64 "%tmp263" 64 }       { alloc 64 "%tmp266" 64 }       { alloc 64 "%tmp267" 32 }       { alloc 64 "%tmp270" 64 }       { alloc 64 "%tmp273" 64 }       { alloc 64 "%tmp274" 32 }       { alloc 64 "%tmp277" 64 }       { alloc 64 "%tmp280" 64 }       { alloc 64 "%tmp281" 32 }       { alloc 64 "%tmp284" 64 }       { alloc 64 "%tmp287" 64 }       { alloc 64 "%tmp288" 64 }       { alloc 64 "%tmp289" 64 }       { alloc 64 "%tmp291" 64 }       { alloc 64 "%tmp292" 64 }       { alloc 64 "%tmp295" 64 }       { alloc 64 "%tmp296" 64 }       { alloc 64 "%tmp298" 64 }       { alloc 64 "%tmp299" 64 }       { alloc 64 "%tmp302" 64 }       { alloc 64 "%tmp303" 64 }       { alloc 64 "%tmp305" 64 }       { alloc 64 "%tmp306" 64 }       { alloc 64 "%tmp308" 64 }       { alloc 64 "%tmp309" 64 }       { alloc 64 "%tmp311" 64 }       { alloc 64 "%tmp312" 64 }       { alloc 64 "%tmp314" 32 }       { alloc 64 "%tmp317" 64 }       { alloc 64 "%tmp320" 64 }       { alloc 64 "%tmp321" 32 }       { alloc 64 "%tmp324" 64 }       { alloc 64 "%tmp327" 64 }       { alloc 64 "%tmp328" 32 }       { alloc 64 "%tmp331" 64 }       { alloc 64 "%tmp334" 64 }       { alloc 64 "%tmp335" 32 }       { alloc 64 "%tmp338" 64 }       { alloc 64 "%tmp341" 64 }       { alloc 64 "%tmp342" 64 }       { alloc 64 "%tmp343" 64 }       { alloc 64 "%tmp345" 64 }       { alloc 64 "%tmp346" 64 }       { alloc 64 "%tmp349" 64 }       { alloc 64 "%tmp350" 64 }       { alloc 64 "%tmp352" 64 }       { alloc 64 "%tmp353" 64 }       { alloc 64 "%tmp356" 32 }       { alloc 64 "%tmp359" 64 }       { alloc 64 "%tmp362" 64 }       { alloc 64 "%tmp363" 32 }       { alloc 64 "%tmp366" 64 }       { alloc 64 "%tmp369" 64 }       { alloc 64 "%tmp370" 32 }       { alloc 64 "%tmp373" 64 }       { alloc 64 "%tmp376" 64 }       { alloc 64 "%tmp377" 32 }       { alloc 64 "%tmp380" 64 }       { alloc 64 "%tmp383" 64 }       { alloc 64 "%tmp384" 64 }       { alloc 64 "%tmp385" 64 }       { alloc 64 "%tmp387" 64 }       { alloc 64 "%tmp388" 64 }       { alloc 64 "%tmp391" 64 }       { alloc 64 "%tmp392" 64 }       { alloc 64 "%tmp394" 64 }       { alloc 64 "%tmp395" 64 }       { alloc 64 "%tmp398" 64 }       { alloc 64 "%tmp399" 64 }       { alloc 64 "%tmp401" 64 }       { alloc 64 "%tmp402" 64 }       { alloc 64 "%tmp404" 64 }       { alloc 64 "%tmp405" 64 }       { alloc 64 "%tmp407" 64 }       { alloc 64 "%tmp408" 64 }       { alloc 64 "%tmp410" 64 }       { alloc 64 "%tmp411" 64 }       { alloc 64 "%tmp413" 64 }       { alloc 64 "%tmp414" 64 }       { alloc 64 "%tmp416" 64 }       { alloc 64 "%tmp417" 64 }       { alloc 64 "%tmp419" 64 }       { alloc 64 "%tmp420" 64 }       { alloc 64 "%tmp422" 64 }       { alloc 64 "%tmp423" 64 }       { alloc 64 "%tmp425" 64 }       { alloc 64 "%tmp426" 64 }       { alloc 64 "%tmp428" 64 }       { alloc 64 "%tmp429" 64 }       { alloc 64 "%tmp431" 64 }       { alloc 64 "%tmp432" 64 }       { alloc 64 "%tmp434" 64 }       { alloc 64 "%tmp435" 64 }       { alloc 64 "%tmp437" 32 }       { alloc 64 "%tmp440" 64 }       { alloc 64 "%tmp443" 64 }       { alloc 64 "%tmp444" 64 }       { alloc 64 "%tmp446" 32 }       { alloc 64 "%tmp449" 64 }       { alloc 64 "%tmp452" 64 }       { alloc 64 "%tmp453" 64 }       { alloc 64 "%tmp455" 32 }       { alloc 64 "%tmp458" 64 }       { alloc 64 "%tmp461" 64 }       { alloc 64 "%tmp462" 64 }       { alloc 64 "%tmp464" 32 }       { alloc 64 "%tmp467" 64 }       { alloc 64 "%tmp470" 64 }       { alloc 64 "%tmp471" 64 }       { alloc 64 "%tmp474" 64 }       { alloc 64 "%tmp475" 64 }       { alloc 64 "%tmp478" 64 }       { alloc 64 "%tmp479" 64 }       { alloc 64 "%tmp481" 32 }       { alloc 64 "%tmp484" 64 }       { alloc 64 "%tmp487" 64 }       { alloc 64 "%tmp488" 64 }       { alloc 64 "%tmp490" 32 }       { alloc 64 "%tmp493" 64 }       { alloc 64 "%tmp496" 64 }       { alloc 64 "%tmp497" 64 }       { alloc 64 "%tmp499" 32 }       { alloc 64 "%tmp502" 64 }       { alloc 64 "%tmp505" 64 }       { alloc 64 "%tmp506" 64 }       { alloc 64 "%tmp508" 32 }       { alloc 64 "%tmp511" 64 }       { alloc 64 "%tmp514" 64 }       { alloc 64 "%tmp515" 64 }       { alloc 64 "%tmp517" 32 }       { alloc 64 "%tmp520" 64 }       { alloc 64 "%tmp523" 64 }       { alloc 64 "%tmp524" 64 }       { alloc 64 "%tmp526" 32 }       { alloc 64 "%tmp529" 64 }       { alloc 64 "%tmp532" 64 }       { alloc 64 "%tmp533" 64 }       { alloc 64 "%tmp535" 32 }       { alloc 64 "%tmp538" 64 }       { alloc 64 "%tmp541" 64 }       { alloc 64 "%tmp542" 64 }       { alloc 64 "%tmp544" 32 }       { alloc 64 "%tmp547" 64 }       { alloc 64 "%tmp550" 64 }       { alloc 64 "%tmp551" 64 }       { alloc 64 "%tmp554" 64 }       { alloc 64 "%tmp555" 64 }       { alloc 64 "%tmp558" 64 }       { alloc 64 "%tmp559" 64 }       { alloc 64 "%tmp561" 32 }       { alloc 64 "%tmp564" 64 }       { alloc 64 "%tmp567" 64 }       { alloc 64 "%tmp568" 64 }       { alloc 64 "%tmp570" 32 }       { alloc 64 "%tmp573" 64 }       { alloc 64 "%tmp576" 64 }       { alloc 64 "%tmp577" 64 }       { alloc 64 "%tmp579" 32 }       { alloc 64 "%tmp582" 64 }       { alloc 64 "%tmp585" 64 }       { alloc 64 "%tmp586" 64 }       { alloc 64 "%tmp588" 32 }       { alloc 64 "%tmp591" 64 }       { alloc 64 "%tmp595" 32 }       { alloc 64 "%tmp597" 32 }       { alloc 64 "%tmp598" 32 }       { alloc 64 "%tmp600" 64 }       { alloc 64 "%tmp604" 32 }       { alloc 64 "%tmp605" 32 }       { alloc 64 "%tmp608" 64 }       { alloc 64 "%tmp609" 64 }      }    { inits }    { stmts          
+{ label 64 { lref 64 "fft_twiddle_8::bb12::11" } { dec_unsigned 64 0 } }     { jump      { label 64 { lref 64 "fft_twiddle_8::bb610" } { dec_unsigned 64 0 } }      leaving      0     }
+{ label 64 { lref 64 "fft_twiddle_8::bb610" } { dec_unsigned 64 0 } }          { return }    
+     }
+    }
+   }
+  }
+ }

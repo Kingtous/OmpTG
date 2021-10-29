@@ -1,0 +1,22 @@
+{ alf
+ { macro_defs }
+ { least_addr_unit 8 }
+ little_endian
+ { exports
+  { frefs 
+   { fref 64 "$null" }
+   { fref 64 "$mem" }
+ }
+  { lrefs }
+ }
+ { imports
+  { frefs }
+  { lrefs }
+ }
+ { decls
+  { alloc 64 "$null" 64 }
+  { alloc 64 "$mem" inf }
+ }
+ { inits }
+ { funcs }
+}
