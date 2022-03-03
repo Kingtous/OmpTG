@@ -40,3 +40,26 @@ Remember to give "wctg" permission to execute.
 ## OmpTG V2.1
 
 - unspported: Call.
+
+# Deploy OmpTG Online By Docker
+
+- `Pull Image`
+
+> Download From Aliyun Server in Hangzhou
+
+```shell
+docker pull registry.cn-hangzhou.aliyuncs.com/omptg/omptg-server:latest
+```
+
+- `Run Image`
+
+```shell
+docker run --name omptg-online -dit -P -p 8000:80 -p 8888:8888 registry.cn-hangzhou.aliyuncs.com/omptg/omptg-server:latest /bin/bash start.sh
+```
+
+- `Open OmpTG Online in Browser`
+  - `127.0.0.1:8000`
+
+- `Open BT-Panel in Browser`
+  - `127.0.0.1:8888/xxx`
+    - get `xxx` from terminal, type `/etc/init.d/bt default`
