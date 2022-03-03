@@ -48,7 +48,7 @@ Remember to give "wctg" permission to execute.
 > Download From Aliyun Server in Hangzhou
 
 ```shell
-docker pull docker pull kingtous/omptg-online:latest
+docker pull kingtous/omptg-online:latest
 ```
 
 - `Run Image`
