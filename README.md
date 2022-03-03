@@ -48,13 +48,13 @@ Remember to give "wctg" permission to execute.
 > Download From Aliyun Server in Hangzhou
 
 ```shell
-docker pull registry.cn-hangzhou.aliyuncs.com/omptg/omptg-server:latest
+docker pull docker pull kingtous/omptg-online:latest
 ```
 
 - `Run Image`
 
 ```shell
-docker run --name omptg-online -dit -P -p 8000:80 -p 8888:8888 registry.cn-hangzhou.aliyuncs.com/omptg/omptg-server:latest /bin/bash start.sh
+docker run --name omptg-online -dit -P -p 8000:80 -p 8888:8888 kingtous/omptg-online:latest /bin/bash start.sh
 ```
 
 - `Open OmpTG Online in Browser`
