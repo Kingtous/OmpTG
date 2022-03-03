@@ -45,7 +45,7 @@ Remember to give "wctg" permission to execute.
 
 - `Pull Image`
 
-> Download From Aliyun Server in Hangzhou
+> Download From Docker Hub
 
 ```shell
 docker pull kingtous/omptg-online:latest
