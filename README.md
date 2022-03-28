@@ -1,6 +1,13 @@
 # OmpTG
 Generate WCET for ALF Statements based on SWEET Tool.
 
+Jinghao Sun, Tao Jin, Yekai Xue, Liwei Zhang, Jinrong Liu, Nan Guan, Quan Zhou,
+ompTG: From OpenMP Programs to Task Graphs,
+Journal of Systems Architecture,
+2022,
+[https://doi.org/10.1016/j.sysarc.2022.102470](https://doi.org/10.1016/j.sysarc.2022.102470)
+
+
 ## Method
 - details see SWEET manual 4.14.
 
